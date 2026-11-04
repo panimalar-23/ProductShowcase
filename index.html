@@ -1,0 +1,290 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOVA Watch X | Product Showcase</title>
+
+    <style>
+        :root {
+            --primary: #635bff;
+            --dark: #17172b;
+            --light: #f5f6fc;
+            --text: #55566a;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        header {
+            background: var(--white);
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        header h1 {
+            color: var(--primary);
+            font-size: 26px;
+        }
+
+        nav {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: var(--primary);
+        }
+
+        main {
+            padding: 60px 8%;
+        }
+
+        .product-section {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+
+        .product-image {
+            flex: 1 1 300px;
+            min-height: 350px;
+            background: linear-gradient(135deg, #635bff, #a8a3ff);
+            border-radius: 18px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .watch {
+            width: 145px;
+            height: 190px;
+            background: #202033;
+            border: 9px solid #34344d;
+            border-radius: 38px;
+            box-shadow: 0 15px 35px #29265b66;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .watch::before,
+        .watch::after {
+            content: "";
+            position: absolute;
+            width: 65px;
+            height: 65px;
+            background: #29293c;
+            z-index: 0;
+        }
+
+        .watch::before {
+            top: -70px;
+            border-radius: 18px 18px 5px 5px;
+        }
+
+        .watch::after {
+            bottom: -70px;
+            border-radius: 5px 5px 18px 18px;
+        }
+
+        .watch-screen {
+            color: white;
+            text-align: center;
+            z-index: 1;
+        }
+
+        .watch-screen .time {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .watch-screen .date {
+            font-size: 10px;
+            color: #b9b8ff;
+        }
+
+        .product-info {
+            flex: 1 1 300px;
+        }
+
+        .tag {
+            color: var(--primary);
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 13px;
+        }
+
+        .product-info h2 {
+            font-size: 42px;
+            margin: 12px 0;
+            line-height: 1.2;
+        }
+
+        .description {
+            color: var(--text);
+            margin: 18px 0;
+        }
+
+        .features {
+            margin: 20px 0;
+            padding-left: 20px;
+            color: var(--text);
+        }
+
+        .price {
+            font-size: 28px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        .product-button {
+            background: var(--primary);
+            color: var(--white);
+            border: none;
+            padding: 14px 30px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        .product-button:hover {
+            background: var(--dark);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 18px #635bff55;
+        }
+
+        footer {
+            background: var(--dark);
+            color: var(--white);
+            text-align: center;
+            padding: 22px;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav {
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 15px;
+            }
+
+            main {
+                padding: 25px 5%;
+            }
+
+            .product-section {
+                flex-direction: column;
+                padding: 25px;
+                gap: 35px;
+            }
+
+            .product-image {
+                width: 100%;
+                min-height: 280px;
+            }
+
+            .product-info h2 {
+                font-size: 32px;
+            }
+
+            .product-info {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>NOVA TECH</h1>
+
+        <nav aria-label="Main navigation">
+            <a href="#">Home</a>
+            <a href="#product">Products</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="product-section" id="product">
+
+            <div class="product-image" role="img"
+                 aria-label="Illustration of the NOVA Watch X smartwatch">
+                <div class="watch">
+                    <div class="watch-screen">
+                        <div class="time">05.30</div>
+                        <div class="date">FRI, SEP 23</div>
+                        <div>♥ 98 BPM</div>
+                    </div>
+                </div>
+            </div>
+
+            <article class="product-info">
+                <span class="tag">Introducing NOVA</span>
+
+                <h2>Meet the<br>NOVA Watch X</h2>
+
+                <p class="description">
+                    Experience the perfect combination of style and
+                    technology. Stay connected, track your fitness,
+                    and make every moment count.
+                </p>
+
+                <ul class="features">
+                    <li>Advanced health and fitness tracking</li>
+                    <li>Long-lasting 7-day battery</li>
+                    <li>Water-resistant design</li>
+                    <li>Bright AMOLED display</li>
+                </ul>
+
+                <p class="price">₹8,999</p>
+
+                <button class="product-button">Explore Now</button>
+            </article>
+
+        </section>
+    </main>
+
+    <footer id="contact">
+        <p>&copy; 2026 NOVA TECH. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
